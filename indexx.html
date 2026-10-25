@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Run Heart Experiences | Tours en Cartagena, Barranquilla & Santa Marta</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylee.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,14 +13,32 @@
     <header class="header">
         <div class="container nav-container">
             <a href="#" class="logo-wrapper">
-                <img src="Logo.jpeg" alt="Run Heart Experiences Logo" class="brand-logo">
+                <img src="Logo.jpeg" alt="Run Heart Experiences Logo" class="brand-logo" onerror="this.src='https://images.unsplash.com/photo-1533554926513-ea7e1637045e?auto=format&fit=crop&w=150&q=80'">
                 <span class="logo-text">RUN HEART <small>EXPERIENCES</small></span>
             </a>
             <nav class="nav-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#actividades">Experiencias</a>
-                <a href="#resenas">Reseñas</a>
-                <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quisiera%20solicitar%20el%20cat%C3%A1logo%20completo%20de%20tours" target="_blank" class="btn-nav">Catálogo Completo</a>
+                <a href="#inicio" data-i18n="nav-inicio">Inicio</a>
+                <a href="#actividades" data-i18n="nav-tours">Experiencias</a>
+                <a href="#resenas" data-i18n="nav-reviews">Reseñas</a>
+                <a href="#contacto" data-i18n="nav-contact">Contacto</a>
+                
+ <!-- Botones de banderas -->
+            <div class="lang-buttons">
+                <button onclick="changeLanguage('es')" title="Español" class="lang-btn">
+                    <img src="https://flagcdn.com/w20/co.png" alt="Español" class="flag-icon">
+                </button>
+                <button onclick="changeLanguage('en')" title="English" class="lang-btn">
+                    <img src="https://flagcdn.com/w20/us.png" alt="English" class="flag-icon">
+                </button>
+                <button onclick="changeLanguage('pt')" title="Português" class="lang-btn">
+                    <img src="https://flagcdn.com/w20/br.png" alt="Português" class="flag-icon">
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>
+
+                <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quisiera%20solicitar%20el%20cat%C3%A1logo%20completo%20de%20tours" target="_blank" class="btn-nav" data-i18n="nav-catalog">Catálogo Completo</a>
             </nav>
         </div>
     </header>
@@ -30,11 +48,11 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <span class="tagline">Cartagena • Barranquilla • Santa Marta</span>
-            <h1>Descubre el Caribe con Run Heart Experiences</h1>
-            <p>Tours exclusivos, pasadías inolvidables en islas, cultura y la mejor diversión con atención personalizada.</p>
+            <h1 data-i18n="hero-title">Descubre el Caribe con Run Heart Experiences</h1>
+            <p data-i18n="hero-desc">Tours exclusivos, pasadías inolvidables en islas, cultura y la mejor diversión con atención personalizada.</p>
             <div class="hero-buttons">
-                <a href="#actividades" class="btn btn-primary">Ver Tours Destacados</a>
-                <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences!%20Me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20personalizada" target="_blank" class="btn btn-secondary">Asesoría Directa</a>
+                <a href="#actividades" class="btn btn-primary" data-i18n="hero-btn1">Ver Tours Destacados</a>
+                <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences!%20Me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20personalizada" target="_blank" class="btn btn-secondary" data-i18n="hero-btn2">Asesoría Directa</a>
             </div>
         </div>
     </section>
@@ -42,8 +60,8 @@
     <!-- Catálogo de Actividades -->
     <section id="actividades" class="actividades container">
         <div class="section-title">
-            <h2>Nuestras Experiencias Principales</h2>
-            <p>Elige tu próximo destino. ¿Buscas otro tour? Contáctanos para enviarte nuestro catálogo extendido.</p>
+            <h2 data-i18n="sec-tours-title">Nuestras Experiencias Principales</h2>
+            <p data-i18n="sec-tours-desc">Elige tu próximo destino. ¿Buscas otro tour? Contáctanos para enviarte nuestro catálogo extendido.</p>
         </div>
         
         <div class="cards-grid">
@@ -56,10 +74,10 @@
                 </div>
                 <div class="card-body">
                     <h3>City Tour Cartagena</h3>
-                    <p>Recorre la icónica Ciudad Amurallada, Castillo de San Felipe, monumentos históricos y calles coloniales.</p>
+                    <p data-i18n="card-cartagena-desc">Recorre la icónica Ciudad Amurallada, Castillo de San Felipe, monumentos históricos y calles coloniales.</p>
                     <div class="card-footer">
                         <span class="price">Desde $70.000 COP</span>
-                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20me%20interesa%20el%20City%20Tour%20Cartagena" target="_blank" class="btn-card">Reservar</a>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20me%20interesa%20el%20City%20Tour%20Cartagena" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
                     </div>
                 </div>
             </article>
@@ -72,10 +90,10 @@
                 </div>
                 <div class="card-body">
                     <h3>Pasadías Islas del Rosario</h3>
-                    <p>Aguas cristalinas, playas caribeñas, snorkel, transporte marítimo seguro y almuerzo típico.</p>
+                    <p data-i18n="card-islas-desc">Aguas cristalinas, playas caribeñas, snorkel, transporte marítimo seguro y almuerzo típico.</p>
                     <div class="card-footer">
                         <span class="price">Desde $190.000 COP</span>
-                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20informaci%C3%B3n%20de%20Pasadias%20Islas%20del%20Rosario" target="_blank" class="btn-card">Reservar</a>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20informaci%C3%B3n%20de%20Pasadias%20Islas%20del%20Rosario" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
                     </div>
                 </div>
             </article>
@@ -88,15 +106,15 @@
                 </div>
                 <div class="card-body">
                     <h3>City Tour Barranquilla</h3>
-                    <p>Visita el Gran Malecón del Río, Ventana al Mundo, Monumento a la Ventana de Sueños y el Caimán del Río.</p>
+                    <p data-i18n="card-baq-desc">Visita el Gran Malecón del Río, Ventana al Mundo, Monumento a la Ventana de Sueños y el Caimán del Río.</p>
                     <div class="card-footer">
                         <span class="price">Desde $200.000 COP</span>
-                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20info%20de%20City%20Tour%20Barranquilla" target="_blank" class="btn-card">Reservar</a>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20info%20de%20City%20Tour%20Barranquilla" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
                     </div>
                 </div>
             </article>
 
-            <!-- 4. City Tour Barranquilla & Santa Marta -->
+            <!-- 4. Combo Barranquilla & Santa Marta -->
             <article class="card">
                 <div class="card-img-wrapper">
                     <span class="card-badge">Combo Especial</span>
@@ -104,10 +122,10 @@
                 </div>
                 <div class="card-body">
                     <h3>City Tour Barranquilla & Santa Marta</h3>
-                    <p>Un día lleno de aventura visitando la Puerta de Oro y la bahía más hermosa de América.</p>
+                    <p data-i18n="card-combo-desc">Un día lleno de aventura visitando la Puerta de Oro y la bahía más hermosa de América.</p>
                     <div class="card-footer">
                         <span class="price">Desde $280.000 COP</span>
-                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20me%20interesa%20el%20Combo%20Barranquilla%20y%20Santa%20Marta" target="_blank" class="btn-card">Reservar</a>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20me%20interesa%20el%20Combo%20Barranquilla%20y%20Santa%20Marta" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
                     </div>
                 </div>
             </article>
@@ -120,10 +138,10 @@
                 </div>
                 <div class="card-body">
                     <h3>Tour San Basilio de Palenque</h3>
-                    <p>Conoce el primer pueblo libre de América, su música, medicina ancestral, peinados e historia viva.</p>
+                    <p data-i18n="card-palenque-desc">Conoce el primer pueblo libre de América, su música, medicina ancestral, peinados e historia viva.</p>
                     <div class="card-footer">
                         <span class="price">Desde $280.000 COP</span>
-                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20del%20Tour%20a%20Palenque" target="_blank" class="btn-card">Reservar</a>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20del%20Tour%20a%20Palenque" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
                     </div>
                 </div>
             </article>
@@ -136,10 +154,10 @@
                 </div>
                 <div class="card-body">
                     <h3>Chiva Rumbera Nocturna</h3>
-                    <p>Paseo animado con música, animador en vivo, licores nacionales y parada en discotecas populares.</p>
+                    <p data-i18n="card-chiva-desc">Paseo animado con música, animador en vivo, licores nacionales y parada en discotecas populares.</p>
                     <div class="card-footer">
                         <span class="price">Desde $60.000 COP</span>
-                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20reservar%20la%20Chiva%20Rumbera" target="_blank" class="btn-card">Reservar</a>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20reservar%20la%20Chiva%20Rumbera" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
                     </div>
                 </div>
             </article>
@@ -152,10 +170,10 @@
                 </div>
                 <div class="card-body">
                     <h3>Pasadías a Tierra Bomba</h3>
-                    <p>Disfruta de exclusivos Beach Clubs, piscinas frente al mar, gastronomía de autor y descanso total.</p>
+                    <p data-i18n="card-tierrabomba-desc">Disfruta de exclusivos Beach Clubs, piscinas frente al mar, gastronomía de autor y descanso total.</p>
                     <div class="card-footer">
                         <span class="price">Desde $90.000 COP</span>
-                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20info%20de%20Pasad%C3%ADa%20a%20Tierra%20Bomba" target="_blank" class="btn-card">Reservar</a>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20info%20de%20Pasad%C3%ADa%20a%20Tierra%20Bomba" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
                     </div>
                 </div>
             </article>
@@ -168,15 +186,15 @@
                 </div>
                 <div class="card-body">
                     <h3>Atardecer en la Bahía</h3>
-                    <p>Recorridos mágicos al caer el sol en Bote Deportivo, Catamarán o Barcos Piratas con barra libre opcional.</p>
+                    <p data-i18n="card-sunset-desc">Recorridos mágicos al caer el sol en Bote Deportivo, Catamarán o Barcos Piratas con barra libre opcional.</p>
                     <div class="card-footer">
                         <span class="price">Desde $85.000 COP</span>
-                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20informaci%C3%B3n%20sobre%20el%20Atardecer%20en%20la%20Bah%C3%ADa" target="_blank" class="btn-card">Reservar</a>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20informaci%C3%B3n%20sobre%20el%20Atardecer%20en%20la%20Bah%C3%ADa" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
                     </div>
                 </div>
             </article>
 
-            <!-- 9. Volcán del Totumo (Actualizado) -->
+            <!-- 9. Volcán del Totumo -->
             <article class="card">
                 <div class="card-img-wrapper">
                     <span class="card-badge">Excursión</span>
@@ -184,15 +202,15 @@
                 </div>
                 <div class="card-body">
                     <h3>Volcán del Totumo</h3>
-                    <p>Sumérgete en un lodo medicinal único, masaje relajante y baño refrescante en la ciénaga.</p>
+                    <p data-i18n="card-totumo-desc">Sumérgete en un lodo medicinal único, masaje relajante y baño refrescante en la ciénaga.</p>
                     <div class="card-footer">
                         <span class="price">Desde $150.000 COP</span>
-                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20reservar%20el%20Volc%C3%A1n%20del%20Totumo" target="_blank" class="btn-card">Reservar</a>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20reservar%20el%20Volc%C3%A1n%20del%20Totumo" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
                     </div>
                 </div>
             </article>
 
-            <!-- 10. Sobrevuelo en Helicóptero (Actualizado) -->
+            <!-- 10. Sobrevuelo en Helicóptero -->
             <article class="card">
                 <div class="card-img-wrapper">
                     <span class="card-badge">Cartagena</span>
@@ -200,72 +218,88 @@
                 </div>
                 <div class="card-body">
                     <h3>Sobrevuelo en Helicóptero</h3>
-                    <p>Descubre Cartagena desde las alturas: contempla la Ciudad Amurallada, la bahía y el Caribe en un sobrevuelo exclusivo.</p>
+                    <p data-i18n="card-heli-desc">Descubre Cartagena desde las alturas: contempla la Ciudad Amurallada, la bahía y el Caribe en un sobrevuelo exclusivo.</p>
                     <div class="card-footer">
                         <span class="price">Desde $375.000 COP</span>
-                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20reservar%20el%20Volc%C3%A1n%20del%20Totumo" target="_blank" class="btn-card">Reservar</a>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20reservar%20el%20Helicoptero" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
                     </div>
                 </div>
             </article>
 
-            <!-- 11. Pasadía a Barú (Actualizado) -->
+            <!-- 11. Pasadía a Barú -->
             <article class="card">
                 <div class="card-img-wrapper">
                     <span class="card-badge">Islas</span>
-                    <img src="isla baru.jpg" alt="Sobrevuelo en Helicóptero" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80'">
+                    <img src="isla baru.jpg" alt="Pasadía a Barú" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80'">
                 </div>
                 <div class="card-body">
                     <h3>Pasadía a Barú</h3>
-                    <p>Disfruta un pasadía inolvidable en Barú: relajación, playas de arena blanca y cristalinas aguas turquesas en el Caribe.</p>
+                    <p data-i18n="card-baru-desc">Disfruta un pasadía inolvidable en Barú: relajación, playas de arena blanca y cristalinas aguas turquesas en el Caribe.</p>
                     <div class="card-footer">
                         <span class="price">Desde $70.000 COP</span>
-                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20reservar%20el%20Volc%C3%A1n%20del%20Totumo" target="_blank" class="btn-card">Reservar</a>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20reservar%20Baru" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
                     </div>
                 </div>
             </article>
+
+           <!-- 12. ATV -->
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <span class="card-badge">Cartagena</span>
+                    <div class="card-slider"> 
+                    <img src="ATV.jpg" alt="Cuatrimotos" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80'">
+                    <img src="ATV2.jpg" alt="experiencia">
+                    <img src="ATV3.jpg" alt="exclusivo">
+                </div>
+                </div>
+                <div class="card-body">
+                    <h3>ATV Explore</h3>
+                    <p data-i18n="card-baru-desc">La mejor ruta en ATV de Cartagena: rueda sobre la arena y acelera frente al mar.</p>
+                    <div class="card-footer">
+                        <span class="price">Desde $395.000 COP</span>
+                        <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20reservar%20Baru" target="_blank" class="btn-card" data-i18n="btn-reserve">Reservar</a>
+                    </div>
+                </div>
+            </article>
+
 
         </div>
 
         <!-- Banner Estratégico Catálogo Completo -->
         <div class="catalog-banner">
             <div class="catalog-text">
-                <h3>¿Quieres ver todas nuestras opciones y planes privados?</h3>
-                <p>Tenemos un catálogo interactivo en WhatsApp con promociones de temporada y paquetes personalizados.</p>
+                <h3 data-i18n="banner-title">¿Quieres ver todas nuestras opciones y planes privados?</h3>
+                <p data-i18n="banner-desc">Tenemos un catálogo interactivo en WhatsApp con promociones de temporada y paquetes personalizados.</p>
             </div>
             <a href="https://wa.me/573001230848?text=Hola%20Run%20Heart%20Experiences,%20quiero%20ver%20el%20cat%C3%A1logo%20completo%20de%20WhatsApp" target="_blank" class="btn btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> Ver Catálogo Completo en WhatsApp
+                <i class="fa-brands fa-whatsapp"></i> <span data-i18n="banner-btn">Ver Catálogo Completo en WhatsApp</span>
             </a>
         </div>
     </section>
 
-    <!-- Sección de Calificación / Reseñas -->
+    <!-- Sección de Calificación / Reseñas Dinámicas -->
     <section id="resenas" class="reviews-section">
         <div class="container">
             <div class="section-title">
-                <h2>Opiniones y Calificaciones de Nuestros Viajeros</h2>
-                <p>Déjanos tu comentario sobre tu experiencia con Run Heart Experiences.</p>
+                <h2 data-i18n="rev-sec-title">Opiniones y Calificaciones de Nuestros Viajeros</h2>
+                <p data-i18n="rev-sec-desc">Déjanos tu comentario sobre tu experiencia con Run Heart Experiences.</p>
             </div>
 
-            <div class="reviews-grid">
+            <!-- Contenedor con SOLO 1 comentario inicial real -->
+            <div class="reviews-grid" id="reviewsContainer">
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
                     <p class="review-text">"Súper recomendados. El pasadía a Islas del Rosario fue increíble y la atención por WhatsApp desde el primer segundo fue de 10/10."</p>
                     <span class="review-author">- Maria Fernanda G.</span>
                 </div>
-
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"La Chiva Rumbera fue la mejor parte de nuestro viaje a Cartagena. Súper puntual el transporte y todo muy organized."</p>
-                    <span class="review-author">- Carlos M.</span>
-                </div>
             </div>
 
-            <!-- Formulario para calificar -->
+            <!-- Formulario para calificar y publicar al instante -->
             <div class="rating-form-wrapper">
-                <h3>¿Viajaste con nosotros? ¡Déjanos tu opinión!</h3>
-                <form class="rating-form" onsubmit="alert('¡Gracias por tu calificación! Tu opinión es muy valiosa para Run Heart Experiences.'); return false;">
+                <h3 data-i18n="form-title">¿Viajaste con nosotros? ¡Déjanos tu opinión!</h3>
+                <form class="rating-form" id="reviewForm">
                     <div class="star-rating">
-                        <input type="radio" id="star5" name="rating" value="5" required /><label for="star5" title="5 estrellas">★</label>
+                        <input type="radio" id="star5" name="rating" value="5" checked /><label for="star5" title="5 estrellas">★</label>
                         <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 estrellas">★</label>
                         <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 estrellas">★</label>
                         <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 estrellas">★</label>
@@ -273,24 +307,47 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="text" placeholder="Tu Nombre o Apodo" required class="form-input">
+                        <input type="text" id="reviewerName" placeholder="Tu Nombre o Apodo" required class="form-input">
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Escribe aquí tu experiencia o comentario..." rows="3" required class="form-input"></textarea>
+                        <textarea id="reviewerText" placeholder="Escribe aquí tu experiencia o comentario..." rows="3" required class="form-input"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar Calificación</button>
+                    <button type="submit" class="btn btn-primary" data-i18n="form-btn">Enviar Calificación</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Pie de página -->
+    <!-- Sección de Contacto y Correo Corporativo -->
+    <section id="contacto" class="contact-section container">
+        <div class="section-title">
+            <h2 data-i18n="contact-title">Contáctanos Directamente</h2>
+            <p data-i18n="contact-desc">Estamos listos para planear tus próximas vacaciones en el Caribe.</p>
+        </div>
+        <div class="contact-box">
+            <div class="contact-info">
+                <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> contacto@runheartexperiences.com</p>
+                <p><i class="fa-solid fa-phone"></i> <strong>WhatsApp / Teléfono:</strong> +57 300 123 0848</p>
+                <p><i class="fa-solid fa-location-dot"></i> <strong>Ubicación:</strong> Cartagena de Indias, Colombia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página con Redes Sociales -->
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-logo">
                 <p class="logo-text-footer">RUN HEART EXPERIENCES</p>
-                <p class="footer-quote">“El mundo es demasiado grande como para quedarte en un solo lugar. ¡Viaja, vive y colecciona momentos e historias inolvidables!”</p>
+                <p class="footer-quote" data-i18n="footer-quote">“El mundo es demasiado grande como para quedarte en un solo lugar. ¡Viaja, vive y colecciona momentos e historias inolvidables!”</p>
             </div>
+
+            <!-- Redes Sociales Oficiales -->
+            <div class="social-links">
+                <a href="https://instagram.com/runheartexperiences" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://tiktok.com/@runheartexperiences" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://facebook.com/runheartexperiences" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Run Heart Experiences. Todos los derechos reservados.</p>
             </div>
@@ -302,5 +359,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

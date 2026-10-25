@@ -6,7 +6,7 @@
     --bg-card: #121212;
     --text-light: #ffffff;
     --text-muted: #b0b0b0;
-    --accent-blue: #007bc7; /* Azul sutil inspirado en las olas de tu logo */
+    --accent-blue: #007bc7;
     --accent-blue-hover: #1aa0f2;
     --whatsapp-green: #25d366;
     --font-primary: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -86,7 +86,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -100,6 +100,22 @@ body {
 
 .nav-links a:hover {
     color: var(--accent-blue);
+}
+
+.lang-selector {
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+.lang-selector:hover {
+    border-color: var(--accent-blue);
 }
 
 .btn-nav {
@@ -116,6 +132,32 @@ body {
     transform: translateY(-2px);
 }
 
+
+/* Ajuste para las banderitas gráficas */
+.lang-btn {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.flag-icon {
+    width: 20px;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
+
+.lang-btn:hover {
+    background: #007bc7;
+    border-color: #007bc7;
+    transform: scale(1.1);
+}
 /* ==========================================================================
    Portada Principal / Hero
    ========================================================================== */
@@ -422,7 +464,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Sistema de estrellas en CSS puro */
 .star-rating {
     display: flex;
     flex-direction: row-reverse;
@@ -467,7 +508,42 @@ body {
 }
 
 /* ==========================================================================
-   Pie de página
+   Sección de Contacto
+   ========================================================================== */
+.contact-section {
+    padding: 60px 20px;
+    background: var(--bg-dark);
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-info i {
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Pie de página y Redes Sociales
    ========================================================================== */
 .footer {
     background: #000;
@@ -491,8 +567,26 @@ body {
     font-style: italic;
     color: var(--text-muted);
     max-width: 600px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 25px auto;
     font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 24px;
+    transition: var(--transition-fast);
+}
+
+.social-links a:hover {
+    color: var(--accent-blue);
+    transform: scale(1.1);
 }
 
 .footer-bottom {
@@ -568,4 +662,88 @@ body {
         flex-direction: column;
         text-align: center;
     }
+}
+
+/* ==========================================
+   CARRUSEL DE IMÁGENES DENTRO DE LAS TARJETAS
+   ========================================== */
+.card-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Contenedor deslizable de las 3 imágenes */
+.card-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* Ocultar barra de desplazamiento visual */
+    scrollbar-width: none; /* Firefox */
+}
+
+.card-slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+/* Cada imagen dentro del slider */
+.card-slider img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+/* Badge o etiqueta del destino (fijo sobre las imágenes) */
+.card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(0, 123, 199, 0.9);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+}
+
+/* Indicador de ayuda para el usuario */
+.slider-hint {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    z-index: 2;
+    pointer-events: none;
+    backdrop-filter: blur(2px);
+}
+
+/* Indicador visual de deslizamiento */
+.slider-hint {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    z-index: 2;
+    pointer-events: none;
+    backdrop-filter: blur(2px);
 }
